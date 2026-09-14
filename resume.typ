@@ -40,7 +40,7 @@
     columns: (1fr, auto),
     gutter: 0.4em,
     [#text(weight: "bold")[#title] - #company],
-    [#dates],
+    [#text(style: "italic", size: 10pt)[#dates]],
   )
   #v(entry-gap, weak: false)
   #bullets(items)
@@ -51,8 +51,10 @@
   #grid(
     columns: (1fr, auto),
     gutter: 0.3em,
-    [#text(weight: "bold")[#title] #text(style: "italic")[#tech]],
-    [#if url != none { link(url, "GitHub") }],
+    [#text(weight: "bold")[#title] - #tech],
+    [#if url != none {
+      text(style: "italic", size: 10pt)[#link(url, "GitHub")]
+    }],
   )
   #v(entry-gap, weak: false)
   #set par(leading: entry-leading)
@@ -63,7 +65,7 @@
 #align(center)[
   #text(size: 18pt, weight: "bold")[Pulkit Garg]
   #v(0.12em)
-  pgarg\@uwaterloo.ca  ·  +1 (548) 255-2374  ·  linkedin.com/in/pulkitgarg784  ·  pulkit.dev
+  pgarg\@uwaterloo.ca  ·  (548) 255-2374  ·  linkedin.com/in/pulkitgarg784  ·  pulkit.dev
 ]
 
 #section("EDUCATION")
@@ -75,85 +77,81 @@
     #text(weight: "bold")[University of Waterloo] - Bachelor of Computer Science \
     Cognitive Science Minor · Fine Arts Specialization · President's Scholarship of Distinction
   ],
-  [Sep 2022 - Present],
+   [#text(style: "italic", size: 10pt)[Sep 2022 - Present]],
 )
 
 #section("TECHNICAL SKILLS")
 
 *Languages:* C++, C\#, Python, Java, Kotlin, GLSL, HLSL \
-*Graphics & Systems:* Vulkan, OpenGL, GPU Programming, Compute Shaders, Multithreading, Real-Time Rendering \
-*Tools & Frameworks:* Git, CMake, Android SDK, Unity, Unreal Engine, React Native
+*Graphics & Systems:* Vulkan, OpenGL, GPU/Compute Programming, Multithreading, Performance Optimization, Real-Time Rendering \
+*Tools & Frameworks:* Git, CMake, Android SDK, Unity, Unreal Engine, React Native, Firebase
 
 #section("EXPERIENCE")
 
 #exp(
   "Graphics Programming Intern", "SideFX", "Jan 2026 - Present",
   (
-    [Implemented core 3D viewport functionality in Vulkan and built multiple Vulkan libraries with custom GLSL shaders, achieving more than 20x polygon reduction across instances and significant draw-call reduction.],
-    [Designed and built a GPU-based Vulkan text-rendering pipeline from scratch using bitmap fonts and texture atlases; implemented skyline bin-packing and extended the system to support TrueType font rasterization.],
-    [Worked directly on performance-critical, cross-platform rendering code used by professional VFX artists in Houdini.]
+    [Developed performance-critical, cross-platform Vulkan viewport systems for Houdini, creating reusable rendering libraries and custom GLSL shader infrastructure used by professional VFX artists.],
+    [Optimized instanced-scene rendering, achieving more than 20x polygon reduction across instances and significantly reducing draw calls.],
+    [Built a GPU-based Vulkan text-rendering pipeline from scratch using bitmap fonts and texture atlases; implemented skyline bin-packing and extended the pipeline for TrueType font rasterization.]
   )
 )
 
 #exp(
   "3D Software Development R&D Intern", "SideFX", "May 2025 - Sep 2025",
   (
-    [Improved data import systems by enabling high-precision numerical parsing and processing for scientific and simulation workflows.],
-    [Reworked mesh decimation algorithms to achieve more than 10x polygon reduction while preserving topological detail and UV/texture maps.],
-    [Designed and implemented a real-time geometry editing tool based on the Push-Pull algorithm, using custom spatial acceleration structures to reduce user interaction complexity by up to 12x and increase modeling throughput by 30%.]
+    [Enhanced data-import systems with high-precision numerical parsing and processing for scientific and simulation workflows.],
+    [Reworked mesh-decimation algorithms to achieve more than 10x polygon reduction while preserving topology and UV/texture maps.],
+    [Designed and implemented a real-time Push-Pull geometry-editing tool with custom spatial acceleration structures, reducing interaction complexity by up to 12x and increasing modeling throughput by 30%.]
   )
 )
 
 #exp(
   "Virtual Reality Developer", "Liftwerx", "Sep 2024 - Dec 2024",
   (
-    [Developed VR training modules for wind turbine technicians using Unity, Unreal Engine, and Blender.],
-    [Led end-to-end development including scripting, debugging, and deployment on AWS S3 and Meta Quest headsets using a custom Android launcher.],
-    [Created a custom Android plugin enabling centralized data synchronization and real-time reporting on technician performance.]
+    [Developed VR training modules for wind-turbine technicians using Unity, Unreal Engine, and Blender.],
+    [Owned scripting, debugging, and deployment to Meta Quest headsets through a custom Android launcher and AWS S3 distribution pipeline.],
+    [Created a custom Android plugin for centralized data synchronization and real-time technician-performance reporting.]
   )
 )
 
 #exp(
   "Software Developer Intern - OS & Graphics", "Ford Motor Company of Canada", "Jan 2024 - Apr 2024",
   (
-    [Contributed to Android Automotive OS by integrating critical vehicle systems including lighting and climate using C++ and Kotlin.],
-    [Reduced memory leaks by refactoring static companion objects, improving OS stability.],
-    [Reduced service load times by up to 70% by implementing multithreaded services.]
+    [Integrated lighting and climate vehicle systems into Android Automotive OS using C++ and Kotlin.],
+    [Reduced service load times by up to 70% by implementing multithreaded services; reduced memory usage and addressed memory leaks.]
   )
 )
 
 #exp(
-  "Software Developer Intern - 3D Visualization", "Ford Motor Company of Canada", "[May 2023 - Sep 2023",
+  "Software Developer Intern - 3D Visualization", "Ford Motor Company of Canada", "May 2023 - Sep 2023",
   (
-    [Built real-time 3D visualization tools for next-generation Ford vehicles using Google Filament; implemented asynchronous asset loading to improve load times, graphical fidelity, and user experience.],
+    [Built real-time 3D visualization tools for next-generation Ford vehicles with Google Filament; implemented asynchronous asset loading to improve load time, graphical fidelity, and user experience.],
   )
 )
 
 #section("PROJECTS")
 
 #project(
-  "FluidSim", "- C++, Vulkan, GLSL",
-  [Highly optimized real-time GPU particle-based fluid simulation with photorealistic rendering, running on a custom-built Vulkan graphics engine.],
+  "FluidSim", "C++, Vulkan, GLSL",
+  [Built a Vulkan application that simulates water with smoothed particle hydrodynamics (SPH); fluid dynamics, neighbor search, and whitewater in GPU compute shaders. Implemented a spatial hash grid for neighbor queries and screen-space surface reconstruction with reflection, refraction, depth absorption, and shadows.],
   url: "https://github.com/pulkitgarg784/FluidSim"
 )
 
 #project(
-  "Voksel", "- C#, Unity, HLSL",
-  [Cross-platform open-source 3D modeling tool for voxel-based game asset creation.],
-  url: "https://github.com/pulkitgarg784"
+  "Voksel", "C#, HLSL",
+  [Built a cross-platform, open-source 3D modeling tool for rapidly creating low-poly game and level-design assets. Implemented import/save, FBX/OBJ export, configurable color palettes, and Unity/Blender control presets.],
+  url: "https://github.com/pulkitgarg784/Voksel"
 )
 
 #project(
-  "Pashu", "- Unity, C#",
-  [Real-time strategy game about running an animal shelter, featuring animal AI, resource management, and a time-of-day system; featured in the GitHub Education program portfolio.],
+  "SpaceLine", "Unity, SteamVR",
+  [Built a physics-based space sandbox with real-time gravity and climate simulation; added a SteamVR mode for immersive exploration. Won NASA Space Apps India and was selected as a global finalist.],
+  url: "https://github.com/pulkitgarg784/SpaceLine_NasaSpaceapps"
 )
 
 #project(
-  "SpaceLine", "- Unity, SteamVR",
-  [Physics-based space sandbox with real-time gravity and climate simulation, plus a VR mode built with SteamVR; won NASA Space Apps India and was selected as a global finalist.],
+  "Prepto", "React Native, Firebase",
+  [Built a cross-platform app for real-time competitive test preparation with Firebase authentication and matchmaking. Synced users, questions, games, and time-stamped responses in Firebase to support real-time game state.],
+  url: "https://github.com/prepto/app"
 )
-
-#section("AWARDS")
-
-Hawk Hacks 2023 - Laurier University · Hack Western 2022 - Best Gaming Hack \
-NASA SpaceApps 2019 - National Winner & Global Finalist among 30,000 participants · AngelHack 2019 - AWS Award
