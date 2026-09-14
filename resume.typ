@@ -91,42 +91,42 @@
 #exp(
   "Graphics Programming Intern", "SideFX", "Jan 2026 - Present",
   (
-    [Developed performance-critical, cross-platform Vulkan viewport systems for Houdini, creating reusable rendering libraries and custom GLSL shader infrastructure used by professional VFX artists.],
-    [Optimized instanced-scene rendering, achieving more than 20x polygon reduction across instances and significantly reducing draw calls.],
-    [Built a GPU-based Vulkan text-rendering pipeline from scratch using bitmap fonts and texture atlases; implemented skyline bin-packing and extended the pipeline for TrueType font rasterization.]
+    [Developed core, performance-critical, cross-platform Vulkan viewport functionality for Houdini, creating reusable rendering libraries and custom GLSL shader infrastructure for professional VFX workflows.],
+    [Optimized instanced-scene rendering to achieve more than 20x polygon reduction across instances while substantially reducing draw calls for complex viewport scenes.],
+    [Designed and built a GPU-based Vulkan text-rendering pipeline from scratch using bitmap fonts and texture atlases; implemented skyline bin-packing and extended the pipeline for TrueType font rasterization.]
   )
 )
 
 #exp(
   "3D Software Development R&D Intern", "SideFX", "May 2025 - Sep 2025",
   (
-    [Enhanced data-import systems with high-precision numerical parsing and processing for scientific and simulation workflows.],
-    [Reworked mesh-decimation algorithms to achieve more than 10x polygon reduction while preserving topology and UV/texture maps.],
-    [Designed and implemented a real-time Push-Pull geometry-editing tool with custom spatial acceleration structures, reducing interaction complexity by up to 12x and increasing modeling throughput by 30%.]
+    [Strengthened scientific and simulation data-import workflows by implementing high-precision numerical parsing and processing.],
+    [Reworked mesh-decimation algorithms to achieve more than 10x polygon reduction while preserving topology and associated UV/texture maps.],
+    [Designed and implemented a real-time Push-Pull geometry-editing tool with custom spatial acceleration structures, reducing user-interaction complexity by up to 12x and increasing modeling throughput by 30%.]
   )
 )
 
 #exp(
   "Virtual Reality Developer", "Liftwerx", "Sep 2024 - Dec 2024",
   (
-    [Developed VR training modules for wind-turbine technicians using Unity, Unreal Engine, and Blender.],
-    [Owned scripting, debugging, and deployment to Meta Quest headsets through a custom Android launcher and AWS S3 distribution pipeline.],
-    [Created a custom Android plugin for centralized data synchronization and real-time technician-performance reporting.]
+    [Delivered VR training modules for wind-turbine technicians using Unity, Unreal Engine, and Blender.],
+    [Owned end-to-end scripting, debugging, and deployment to Meta Quest headsets through a custom Android launcher and AWS S3 distribution pipeline.],
+    [Engineered a custom Android plugin for centralized data synchronization and real-time technician-performance reporting.]
   )
 )
 
 #exp(
   "Software Developer Intern - OS & Graphics", "Ford Motor Company of Canada", "Jan 2024 - Apr 2024",
   (
-    [Integrated lighting and climate vehicle systems into Android Automotive OS using C++ and Kotlin.],
-    [Reduced service load times by up to 70% by implementing multithreaded services; reduced memory usage and addressed memory leaks.]
+    [Built C++ and Kotlin integrations for lighting and climate vehicle systems within Android Automotive OS.],
+    [Introduced multithreaded service execution, reducing service load times by up to 70%; also reduced memory usage and addressed memory leaks.]
   )
 )
 
 #exp(
   "Software Developer Intern - 3D Visualization", "Ford Motor Company of Canada", "May 2023 - Sep 2023",
   (
-    [Built real-time 3D visualization tools for next-generation Ford vehicles with Google Filament; implemented asynchronous asset loading to improve load time, graphical fidelity, and user experience.],
+    [Developed real-time 3D visualization tools for next-generation Ford vehicles with Google Filament; implemented asynchronous asset loading to improve load time, graphical fidelity, and user experience.],
   )
 )
 
